@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Cenit</string>
+    <string name="txt_demo">DEMO</string>
+    <string name="txt_publishers">Publishers in Session:</string>
+    <string name="hint_auth_url">Auth Url</string>
+    <string name="hint_login">Login</string>
+    <string name="hint_user_pass">Password</string>
+    <string name="hint_session_id">Session Id</string>
+    <string name="hint_display_name">Display Name</string>
+    <string name="btn_sign_in">SIGN IN</string>
+    <string name="txt_connect_session_video">Video</string>
+    <string name="txt_connect_session_audio">Audio</string>
+    <string name="txt_connect_watching">Watching</string>
+    <string name="txt_cam_preview">Preview</string>
+    <string name="txt_streaming">Start Stream</string>
+    <string name="txt_width">"Width  pxls:  "</string>
+    <string name="txt_height">"Height pxls:  "</string>
+    <string name="txt_audio">Audio:</string>
+    <string name="txt_video">Video:</string>
+    <string name="txt_frame_rate">"Frame  rate:      "</string>
+    <string name="auth_url">https://</string>
+    <string name="login">login</string>
+    <string name="pass">pass</string>
+    <string name="txt_watch_together">Cenit</string>
+</resources>

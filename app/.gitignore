@@ -1,0 +1,5 @@
+/build
+*.apk
+app/build
+/libs/libsceenic-debug.aar
+/libs/
