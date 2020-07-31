@@ -23,11 +23,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar">
-        <activity android:name=".ui.MainPageActivity"
+        <activity android:name=".ui.Tools"></activity>
+        <activity
+            android:name=".ui.MainPageActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1">
-        </activity>
+            android:theme="@style/AppTheme1"></activity>
         <activity
             android:name=".ui.LoginActivity"
             android:launchMode="singleTop"

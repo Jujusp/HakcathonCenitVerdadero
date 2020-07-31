@@ -33,6 +33,7 @@ import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.RECORD_AUDIO;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
+
 public class LoginActivity extends AppCompatActivity {
 
     public static final String LOGIN_CODE = "login_code";
@@ -135,23 +136,23 @@ public class LoginActivity extends AppCompatActivity {
             onError("Please, enter correct url");
             return;
         }
-        Prefs.putString(SESSION_URL_CODE, url);
+        Prefs.putString(LoginActivity.SESSION_URL_CODE, url);
         final String login = String.valueOf(mLogin.getText());
         if (TextUtils.isEmpty(login)) {
             onError("\"Please, enter login value");
             return;
         }
-        Prefs.putString(LOGIN_CODE, login);
+        Prefs.putString(LoginActivity.LOGIN_CODE, login);
         final String pass = String.valueOf(mPass.getText());
         if (TextUtils.isEmpty(pass)) {
             onError("Please, enter password value");
             return;
         }
-        Prefs.putString(PASS_CODE, pass);
+        Prefs.putString(LoginActivity.PASS_CODE, pass);
         final String sessionId = String.valueOf(mSessionId.getText());
-        Prefs.putString(SESSION_ID_CODE, sessionId);
+        Prefs.putString(LoginActivity.SESSION_ID_CODE, sessionId);
         final String displayName = String.valueOf(mDisplayName.getText());
-        Prefs.putString(DISPLAY_NAME_CODE, displayName);
+        Prefs.putString(LoginActivity.DISPLAY_NAME_CODE, displayName);
         login(url, login, pass, sessionId, displayName);
     }
 
@@ -215,10 +216,10 @@ public class LoginActivity extends AppCompatActivity {
                                 onError("Invalid response, data is missing");
                             } else {
                                 final Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                intent.putExtra(SESSION_URL_CODE, (response.body().getSessionUrl()));
-                                intent.putExtra(SESSION_TOKEN_CODE, (response.body().getToken()));
-                                intent.putExtra(SESSION_ID_CODE, sessionId);
-                                intent.putExtra(DISPLAY_NAME_CODE, displayName);
+                                intent.putExtra(LoginActivity.SESSION_URL_CODE, (response.body().getSessionUrl()));
+                                intent.putExtra(LoginActivity.SESSION_TOKEN_CODE, (response.body().getToken()));
+                                intent.putExtra(LoginActivity.SESSION_ID_CODE, sessionId);
+                                intent.putExtra(LoginActivity.DISPLAY_NAME_CODE, displayName);
                                 new Handler().post(new Runnable() {
                                     @Override
                                     public void run() {

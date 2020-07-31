@@ -1,19 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.MainPageActivity">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#FFFFFF"
+android:backgroundTint="#D1CCCC"
+tools:context=".ui.MainPageActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Inicio"
-        android:textSize="36sp"
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar2"
+    android:layout_width="415dp"
+    android:layout_height="59dp"
+    android:background="#FF9800"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.98"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
+
+<TableRow
+    android:id="@+id/tableRow"
+    android:layout_width="407dp"
+    android:layout_height="67dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <ImageButton
+        android:id="@+id/Home"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="Home"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+    <ImageButton
+        android:id="@+id/bttools"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="Pencil"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:backgroundTint="#FFFFFF"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:backgroundTint="#FFFFFF"
+        android:tint="#AFA9A9"
+        app:srcCompat="@android:drawable/stat_notify_chat" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="93dp"
+        android:layout_height="match_parent"
+        android:backgroundTint="#FFFFFF"
+        android:tint="#AFA9A9"
+        app:srcCompat="@android:drawable/presence_video_online" />
+
+</TableRow>
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="255dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="16dp"
+    android:text="Inicio"
+    app:autoSizeTextType="uniform"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/ingles"
+        android:layout_width="293dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="88dp"
+        android:text="Inglés"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sociales"
+        android:layout_width="293dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="324dp"
+        android:text="Sociales"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        app:layout_constraintVertical_bias="1.0" />
+
+<Button
+    android:id="@+id/button11"
+    android:layout_width="293dp"
+    android:layout_height="118dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="168dp"
+    android:text="Button"
+    app:layout_constraintBottom_toTopOf="@+id/tableRow"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/button10"
+    app:layout_constraintVertical_bias="0.53" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
