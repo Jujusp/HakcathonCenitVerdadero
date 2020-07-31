@@ -1,0 +1,8 @@
+.open auth.db
+ 
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    login STRING(100) UNIQUE NOT NULL,
+    password STRING(100) NOT NULL,
+    token STRING (100) UNIQUE DEFAULT NULL
+);
