@@ -15,7 +15,8 @@ db.init_app(app)
 
 #CAS config
 #CAS address
-app.config['CAS_SERVER'] = 'https://media.sceenic.co:2828'
+#app.config['CAS_SERVER'] = 'https://media.sceenic.co:2828'
+app.config['CAS_SERVER'] = 'https://cas.sandbox-media.sceenic.co'
 #CAS api key
 app.config['API_KEY'] = '46e46383c877d62ab1e3cbf311c9209eab107898b3cf267f4e8ee1b9c098dc697f88718ae5efc720f7f25bc216c94cae9985dc20f83fa39d482158f435d6ed97'
 #CAS secret key
@@ -65,7 +66,7 @@ def logout():
         return jsonify({'ok':0, 'msg':'Failed to logout user'})
 
 #get token for registered user
-@app.route('/get_token', methods=['GET'])
+@app.route('/token', methods=['GET'])
 def get_token():
     token = request.args.get('token')
     #check user authorization
@@ -73,17 +74,17 @@ def get_token():
         return jsonify({'ok':0, 'msg':'Not authorized'})
  
     #make request to auth server with API_KEY
-    jwt_token = jwt.encode({'exp':datetime.utcnow()+timedelta(seconds=30), 'data':{}}, current_app.config['API_SECRET_KEY'], 'HS256')
+    jwt_token = jwt.encode({'exp':datetime.utcnow()+timedelta(seconds=30), 'data':{'api_key':current_app.config['API_KEY'], 'method':'token', 'params':{}}}, current_app.config['API_SECRET_KEY'], 'HS256')
     headers = {'X-ReqToken': jwt_token}
     r = requests.get(current_app.config['CAS_SERVER']+'/token', headers=headers)
  
     #check status code
     if r.status_code!=200:
-        return jsonify({'ok':0,'msg':'Failed to retrieve token'})
+        return jsonify({'ok':0,'msg':'Failed to retrieve token ' + str(r.status_code)})
 
     try:
         data = r.json()
-        return jsonify({'ok':1, 'data':data})
+        return jsonify({'ok':1,'token':r.json()['token'], 'msc_url':r.json()['msc_url']})
     except:
         return jsonify({'ok':0, 'msg':'Invalid response from CAS'})
 
