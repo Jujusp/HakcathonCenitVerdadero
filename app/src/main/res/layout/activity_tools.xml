@@ -55,7 +55,7 @@ tools:context=".ui.Tools">
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/btChat"
         android:layout_width="80dp"
         android:layout_height="match_parent"
         android:backgroundTint="#FFFFFF"

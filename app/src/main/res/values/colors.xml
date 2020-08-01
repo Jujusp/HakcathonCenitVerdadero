@@ -8,4 +8,5 @@
     <color name="colorBlackTrans">#A8000000</color>
     <color name="colorBackground">#FC8612</color>
     <color name="colorWhite">#FFFFFFFF</color>
+    <color name="dark_grey">#DC212121</color>
 </resources>

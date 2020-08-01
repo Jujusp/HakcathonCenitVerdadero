@@ -7,7 +7,7 @@
     <string name="hint_user_pass">Password</string>
     <string name="hint_session_id">Session Id</string>
     <string name="hint_display_name">Display Name</string>
-    <string name="btn_sign_in">SIGN IN</string>
+    <string name="btn_sign_in">Iniciar Sesión</string>
     <string name="txt_connect_session_video">Video</string>
     <string name="txt_connect_session_audio">Audio</string>
     <string name="txt_connect_watching">Watching</string>
@@ -22,4 +22,6 @@
     <string name="login">login</string>
     <string name="pass">pass</string>
     <string name="txt_watch_together">Cenit</string>
+    <string name="title_activity_chat_page">ChatPageActivity</string>
+
 </resources>

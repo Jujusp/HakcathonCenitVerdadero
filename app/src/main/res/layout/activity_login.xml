@@ -6,42 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.LoginActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/auth_url"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_watch_together"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_watch_together"
-            android:textColor="@color/colorWhite"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_demo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_demo"
-            android:textColor="@color/colorAccentDark"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_watch_together" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/auth_url"
         style="@style/EditTextStyleNextUri"
         android:hint="@string/hint_auth_url"
         android:nextFocusDown="@id/password"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +22,7 @@
         style="@style/EditTextStyleNextText"
         android:hint="@string/hint_login"
         android:nextFocusDown="@id/password"
+        android:textColorHint="@color/colorWhite"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -61,6 +32,7 @@
         style="@style/EditTextStyleNextPass"
         android:hint="@string/hint_user_pass"
         android:nextFocusDown="@id/display_name"
+        android:textColorHint="@color/colorWhite"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,22 +42,24 @@
         android:id="@+id/display_name"
         style="@style/EditTextStyleDone"
         android:hint="@string/hint_display_name"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
-        style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/sign_in"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/colorWhite"
         android:gravity="center"
         android:text="@string/btn_sign_in"
         android:textColor="@color/colorBlackTrans"
         android:textSize="25sp"
-        android:backgroundTint="@color/colorAccentDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,4 +80,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="271dp"
+        android:layout_height="168dp"
+        app:layout_constraintBottom_toTopOf="@+id/auth_url"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cenit_logo_02"
+        tools:layout_editor_absoluteX="70dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
