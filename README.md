@@ -42,4 +42,14 @@ Enviar la petición. Debería aparecer correcta tanto en Postman como en la Line
 
 ### 3. Correr la aplicación en Android Studio
 
+Correr la aplicación con el emulador
 
+En la pantalla de inicio de sesión, se colocan los siguientes datos:
+
+- URL: http://10.0.2.2:5000
+- Login: ejemplo (o el que se haya registrado en Postman)
+- Password: ejemplo (o el que se haya registrado en Postman)
+- Session ID: El número que se desee.
+- Display Name: El que se desee poner. Será un apodo en la aplicación.
+
+ Oprimir iniciar sesión. Desde ahí, ya podrá unirse a la clase que desee o usar los mensajes de texto.
