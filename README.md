@@ -13,13 +13,17 @@ Abrir la línea de comandos, e ir a la carpeta "authserver".
 Ejecutar: "python -m venv venv" (crea un ambiente virtual para la aplicación python)
 
 (Windows) Ejecutar: venv\Scripts\pip install -r requirements.txt
+
 (Linux) Ejecutar: venv/bin/pip install -r requirements.txt
 
 Crear base de datos sqlite usando el comando: "sqlite3 < init_db.sql" (en caso de que no exista)
 
 Iniciar el servidor ejecutando los siguientes comandos:
+
 (Windows) set FLASK_APP=auth
+
 (Windows) flask run
+
 (Linux) FLASK_APP=auth venv/bin/flask run
 
 ### 2. Registrar usuarios en la base de datos
