@@ -5,6 +5,8 @@ Demo: https://youtu.be/a8GyrV6zQus
 
 Video de presentación: https://youtu.be/TVSSmJo-TFY
 
+Landing Page: http://cenit.epizy.com/
+
 ## Requerimientos
 - Android Studio
 - Python3
