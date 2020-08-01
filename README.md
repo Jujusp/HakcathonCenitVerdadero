@@ -52,3 +52,10 @@ En la pantalla de inicio de sesión, se colocan los siguientes datos:
 - Display Name: Como desee aparecer en una videollamada.
 
  Oprimir iniciar sesión. Desde ahí, ya podrá unirse a la clase que desee o usar los mensajes de texto.
+
+## Ejecución del Chat:
+
+Para ejecutar el chat de la aplicación es necesario abrir dos emuladores.
+Luego se introduce de nombre "Luis" en uno de los emuladores, mientras en el otro "Pipe Rubio" (debido a que aún se carece de un register). Con ello ambas pantallas estarán conectadas al mismo servidor.
+Ahora se va a poder escribir en el chat sin inconveniente alguno y será refrescado automáticamente.
+Los mensajes serán guardados en una base de datos conectada al mismo servidor.
