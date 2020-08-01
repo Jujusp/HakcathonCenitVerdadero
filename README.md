@@ -5,7 +5,7 @@ Cénit es una plataforma educativa para dispositivos móviles con el modelo de s
 - Android Studio
 - Python3
 - Postman
--SQLite3
+- SQLite3
 ## Iniciar la aplicación
 
 ### 1. Ejecutar el servidor de autenticación
