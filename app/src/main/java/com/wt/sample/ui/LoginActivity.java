@@ -73,8 +73,6 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             mPass.setText(Prefs.getString(PASS_CODE, ""));
         }
-        mSessionId = findViewById(R.id.session_id);
-        mSessionId.setText(Prefs.getString(SESSION_ID_CODE, ""));
         mDisplayName = findViewById(R.id.display_name);
         mDisplayName.setText(Prefs.getString(DISPLAY_NAME_CODE, ""));
 
@@ -149,15 +147,14 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
         Prefs.putString(LoginActivity.PASS_CODE, pass);
-        final String sessionId = String.valueOf(mSessionId.getText());
-        Prefs.putString(LoginActivity.SESSION_ID_CODE, sessionId);
+
         final String displayName = String.valueOf(mDisplayName.getText());
         Prefs.putString(LoginActivity.DISPLAY_NAME_CODE, displayName);
-        login(url, login, pass, sessionId, displayName);
+        login(url, login, pass, displayName);
     }
 
 
-    private void login(final String url, final String login, final String pass, final String sessionId, final String displayName) {
+    private void login(final String url, final String login, final String pass, final String displayName) {
         RestClient.getService(url).login(new LoginRequest(login, pass)).enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(final Call<LoginResponse> call, final Response<LoginResponse> response) {

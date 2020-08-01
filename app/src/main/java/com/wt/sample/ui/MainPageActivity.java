@@ -54,6 +54,20 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.bttools).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                final Intent intent = new Intent(MainPageActivity.this
+                , Tools.class);
+                new Handler().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
+
     }
 
 

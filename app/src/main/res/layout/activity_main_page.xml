@@ -97,17 +97,17 @@ tools:context=".ui.MainPageActivity">
     <Button
         android:id="@+id/sociales"
         android:layout_width="293dp"
-        android:layout_height="118dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="324dp"
         android:text="Sociales"
         app:layout_constraintBottom_toTopOf="@+id/tableRow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button9"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/ingles"
+        app:layout_constraintVertical_bias="0.0" />
 
-<Button
+    <Button
     android:id="@+id/button11"
     android:layout_width="293dp"
     android:layout_height="118dp"
