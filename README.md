@@ -1,5 +1,7 @@
 # Cénit
 Cénit es una plataforma educativa para dispositivos móviles con el modelo de sitios como Coursera o Udemy, en el cuál las personas se pueden inscribir a diferentes cursos para aprender lo que deseen. Utiliza la tecnología de Sceenic para permitir la realización de las clases y ofrece herramientas que pueden usar los estudiantes dentro de ésta.
+Demo: https://youtu.be/a8GyrV6zQus
+Video de presentación: https://youtu.be/TVSSmJo-TFY
 
 ## Requerimientos
 - Android Studio
